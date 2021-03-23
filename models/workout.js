@@ -1,8 +1,10 @@
+
+//Pulls the mongoose for the Schema
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-//organizes the data and categorizes
+//organizes the data and categorizes for the chart
 const wkoutChart = new Schema({
   day: {
     type: Date,
@@ -49,7 +51,7 @@ const wkoutChart = new Schema({
   ]
 });
 
-//pulls the data
+//pulls the data needed for the chart
 const Workout = mongoose.model("workout", wkoutChart);
 
 module.exports = Workout;
